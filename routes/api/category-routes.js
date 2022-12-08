@@ -3,21 +3,22 @@ const { Category, Product } = require("../../models");
 
 // GET all Categories
 // does below need async?
-router.get("/", (req, res) => {
-Category.findAll({
-  include: [Product]
-})
-.then(categories => res.json(categories))
-.catch(err => res.status(500).json(err))
+router.get("/", async (req, res) => {
+// Category.findAll({
+//   include: [Product]
+// })
+// .then(categories => res.json(categories))
+// .catch(err => res.status(500).json(err))
+try {
+  const categoryData = await Category.findAll({
+    include: [Product],
+  });
+  res.status(200).json(categoryData);
+} catch (err) {
+  res.status(500).json(err);
+}
 });
-// try {
-//   const categoryData = Category.findAll({
-//     include: [Product],
-//   });
-//   res.status(200).json(categoryData);
-// } catch (err) {
-//   res.status(500).json(err);
-// }
+
 // GET a single Category
 router.get("/:id", (req, res) => {
   Category.findOne({
