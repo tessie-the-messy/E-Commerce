@@ -12,12 +12,12 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-// code above is same as...
-// Category.findAll({
-//   include: [Product]
-// })
-// .then(categories => res.json(categories))
-// .catch(err => res.status(500).json(err))
+        // code above is same as...
+        // Category.findAll({
+        //   include: [Product]
+        // })
+        // .then(categories => res.json(categories))
+        // .catch(err => res.status(500).json(err))
 
 
 // GET a single Category
@@ -90,7 +90,6 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json({ message: 'No category found with that id!' });
       return;
     }
-  
     res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
