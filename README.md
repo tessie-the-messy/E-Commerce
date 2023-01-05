@@ -14,7 +14,7 @@
   ## Installation
   To install, download files to your chosen source-code editor (VS Code reccomended). Using the terminal, run npm i to install all packages. Make sure a .env file is created with the DB name, user, and password. Use npm run seed to use starter seed data. Use npm run watch, or whatever command used to run your local server. From there, user can use routes to manipulate current seeds, or create new ones.
   
-  Check out this video to see an example of this in action: [Uploading Untitled_ Dec 8, 2022 4_00 PM.webm…]()
+  Check out this video to see an example of this in action: [Untitled_ Dec 8, 2022 4_00 PM.webm](https://user-images.githubusercontent.com/115903135/210685012-8fa54af8-aea9-4eca-a40e-b2dc8600e263.webm)
 
 
   ## Usage
